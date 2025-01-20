@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\parsa\\source\\repos\\MyContacts\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|C:\\Users\\parsa\\source\\repos\\MyContacts\\mycontacts\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|solutionrelative:mycontacts\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|C:\\Users\\parsa\\source\\repos\\MyContacts\\mycontacts\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|solutionrelative:mycontacts\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|c:\\users\\parsa\\source\\repos\\mycontacts\\mycontacts\\services\\contactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|solutionrelative:mycontacts\\services\\contactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|C:\\Users\\parsa\\source\\repos\\MyContacts\\mycontacts\\repository\\icontactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|solutionrelative:mycontacts\\repository\\icontactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|C:\\Users\\parsa\\source\\repos\\MyContacts\\mycontacts\\addoredit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|solutionrelative:mycontacts\\addoredit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|C:\\Users\\parsa\\source\\repos\\MyContacts\\mycontacts\\addoredit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F07419-7C91-41BC-B2ED-FA4EF066205D}|MyContacts\\MyContacts.csproj|solutionrelative:mycontacts\\addoredit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:396992276:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddOrEdit.cs",
+              "DocumentMoniker": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\AddOrEdit.cs",
+              "RelativeDocumentMoniker": "MyContacts\\AddOrEdit.cs",
+              "ToolTip": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\AddOrEdit.cs",
+              "RelativeToolTip": "MyContacts\\AddOrEdit.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAuwEsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T12:31:28.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddOrEdit.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\AddOrEdit.cs",
+              "RelativeDocumentMoniker": "MyContacts\\AddOrEdit.cs",
+              "ToolTip": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\AddOrEdit.cs [Design]",
+              "RelativeToolTip": "MyContacts\\AddOrEdit.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T12:17:48.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\Form1.cs",
+              "RelativeDocumentMoniker": "MyContacts\\Form1.cs",
+              "ToolTip": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\Form1.cs",
+              "RelativeToolTip": "MyContacts\\Form1.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAMwFIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:58:38.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\Form1.cs",
+              "RelativeDocumentMoniker": "MyContacts\\Form1.cs",
+              "ToolTip": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\Form1.cs [Design]",
+              "RelativeToolTip": "MyContacts\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:56:46.494Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContactsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\services\\ContactsRepository.cs",
+              "RelativeDocumentMoniker": "MyContacts\\services\\ContactsRepository.cs",
+              "ToolTip": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\services\\ContactsRepository.cs",
+              "RelativeToolTip": "MyContacts\\services\\ContactsRepository.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowGwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:38:45.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IContactsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\Repository\\IContactsRepository.cs",
+              "RelativeDocumentMoniker": "MyContacts\\Repository\\IContactsRepository.cs",
+              "ToolTip": "C:\\Users\\parsa\\source\\repos\\MyContacts\\MyContacts\\Repository\\IContactsRepository.cs",
+              "RelativeToolTip": "MyContacts\\Repository\\IContactsRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIAwwBAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:32:53.56Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
