@@ -13,23 +13,27 @@ namespace MyContacts
 {
     public partial class Form1 : Form
     {
-        IContactsRepository repository;
         public Form1()
         {
             InitializeComponent();
-            repository = new ContactsRepository();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgContacts.AutoGenerateColumns = false;
-            dgContacts.DataSource = repository.SelectAll();
+            using (Contacts_DBEntities data = new Contacts_DBEntities())
+            {
+                dgContacts.AutoGenerateColumns = false;
+                dgContacts.DataSource = data.MyContacts.ToList();
+            }
         }
 
         private void Refresh()
         {
-            dgContacts.AutoGenerateColumns = false;
-            dgContacts.DataSource = repository.SelectAll();
+            using (Contacts_DBEntities data = new Contacts_DBEntities())
+            {
+                dgContacts.DataSource = data.MyContacts.ToList();
+            }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -56,7 +60,13 @@ namespace MyContacts
                 string fullname = name + " " + lastname;
                 if (MessageBox.Show($"Are you Sure you want to remove {fullname}?","Warning",MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    repository.Delete((int)dgContacts.CurrentRow.Cells[0].Value);
+                    int ContactID = int.Parse(dgContacts.CurrentRow.Cells[0].Value.ToString());
+                   using(Contacts_DBEntities data = new Contacts_DBEntities())
+                    {
+                        MyContact contact = data.MyContacts.Single(c=>c.ContactID==ContactID);
+                        data.MyContacts.Remove(contact);
+                        data.SaveChanges();
+                    }
                     Refresh();
                 }
             }
@@ -79,7 +89,10 @@ namespace MyContacts
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dgContacts.DataSource = repository.Search(textBox1.Text);
+           using(Contacts_DBEntities data = new Contacts_DBEntities())
+            {
+                dgContacts.DataSource = data.MyContacts.Where(c=>c.Name.Contains(textBox1.Text)||c.LastName.Contains(textBox1.Text)).ToList();
+            }
         }
     }
 }

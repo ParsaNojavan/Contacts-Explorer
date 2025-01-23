@@ -4,21 +4,24 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MyContacts
 {
     public partial class AddOrEdit : Form
     {
-        IContactsRepository repos;
+        Contacts_DBEntities data = new Contacts_DBEntities();
         public int TypeID = 0;
         public AddOrEdit()
         {
             InitializeComponent();
-            repos = new ContactsRepository();
         }
 
         private void AddOrEdit_Load(object sender, EventArgs e)
@@ -30,13 +33,13 @@ namespace MyContacts
             else
             {
                 this.Text = "Edit";
-                DataTable dt = repos.SelectRow(TypeID);
-                txtName.Text= dt.Rows[0][1].ToString();
-                txtLastName.Text = dt.Rows[0][2].ToString();
-                txtMobile.Text = dt.Rows[0][3].ToString();
-                txtEmail.Text = dt.Rows[0][4].ToString();
-                txtAddress.Text = dt.Rows[0][5].ToString();
-                nmrAge.Value = (int)dt.Rows[0][6];
+                MyContact contact = data.MyContacts.Find(TypeID);
+                txtName.Text = contact.Name.ToString();
+                txtLastName.Text = contact.LastName.ToString();
+                txtMobile.Text = contact.Mobile.ToString();
+                txtEmail.Text = contact.Email.ToString();
+                txtAddress.Text = contact.Address.ToString();
+                nmrAge.Value = (int)contact.Age;
             }
         }
 
@@ -52,39 +55,38 @@ namespace MyContacts
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (TypeID == 0)
-            {
-                if (ValidateInputs())
-                {
-                    bool isSuccess = repos.Insert(txtName.Text, txtLastName.Text, txtMobile.Text, txtEmail.Text, txtAddress.Text, (int)nmrAge.Value);
-                    if (isSuccess == true)
-                    {
-                        MessageBox.Show("Contact Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DialogResult = DialogResult.OK;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Contact Coudnt Add", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else
-            {
-                if (ValidateInputs())
-                {
-                    bool isSuccess = repos.Update(TypeID,txtName.Text, txtLastName.Text, txtMobile.Text, txtEmail.Text, txtAddress.Text, (int)nmrAge.Value);
-                    if (isSuccess == true)
-                    {
-                        MessageBox.Show("Contact Edited Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DialogResult = DialogResult.OK;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Contact Coudnt Add", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
 
+            if (ValidateInputs())
+            {
+
+                if (TypeID == 0)
+                {
+                    MyContact contact = new MyContact()
+                    {
+                        Name = txtName.Text,
+                        LastName = txtLastName.Text,
+                        Mobile = txtMobile.Text,
+                        Email = txtEmail.Text,
+                        Address = txtAddress.Text,
+                        Age = int.Parse(nmrAge.Value.ToString())
+                    };
+                    data.MyContacts.Add(contact);
+                }
+                else
+                {
+                    var contact = data.MyContacts.Find(TypeID);
+                    contact.Name = txtName.Text;
+                    contact.LastName = txtLastName.Text;
+                    contact.Mobile = txtMobile.Text;
+                    contact.Email = txtEmail.Text;
+                    contact.Address = txtAddress.Text;
+                    contact.Age = int.Parse(nmrAge.Value.ToString());
+                }
+                data.SaveChanges();
+                MessageBox.Show("Contact Added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+            }
         }
     }
 }
+
